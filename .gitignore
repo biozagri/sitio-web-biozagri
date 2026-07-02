@@ -9,3 +9,9 @@ node_modules/
 
 # Editor
 *.log
+
+# Unused source videos (not referenced anywhere on the site; kept locally only)
+videos/hero3.mp4
+videos/hero4.mp4
+videos/hero5.mp4
+videos/hero6.mp4

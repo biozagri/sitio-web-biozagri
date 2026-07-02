@@ -110,18 +110,21 @@
   <div class="hero-card" id="heroCard">
 
     <!-- Video 1: Banana crop - ground level / aerial plantation view -->
+    <!-- WebM (VP9) para carga rápida; MP4 (H.264) como fallback para Safari/iOS -->
     <video id="heroVid1" class="hero-vid"
-      src="videos/hero1.mp4"
       autoplay muted loop playsinline
       poster="images/hero-poster.png"
       preload="auto">
+      <source src="videos/hero1.webm" type="video/webm">
+      <source src="videos/hero1.mp4" type="video/mp4">
     </video>
 
     <!-- Video 2: Aerial fumigation turbothrush nozzle POV (fades in) -->
     <video id="heroVid2" class="hero-vid hero-vid-2"
-      src="videos/hero2.mp4"
       muted loop playsinline
       preload="auto">
+      <source src="videos/hero2.webm" type="video/webm">
+      <source src="videos/hero2.mp4" type="video/mp4">
     </video>
 
     <!-- Cinematic overlay -->
