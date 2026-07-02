@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Control Research BIOZAGRI SAS – Insumos agrícolas biológicos y convencionales certificados ICA. Innovación agrícola para el sector agroindustrial colombiano. Sabaneta y Apartadó, Antioquia.">
+  <meta name="keywords" content="bioinsumos, insumos agrícolas, Antioquia, Colombia, fungicidas, bioestimulantes, nutrición vegetal, ICA, BIOZAGRI, banano, Urabá">
+  <meta property="og:title" content="Control Research BIOZAGRI SAS | Innovación Agrícola">
+  <meta property="og:description" content="Insumos agrícolas certificados ICA para el campo colombiano. Tecnología biológica de vanguardia.">
+  <meta property="og:image" content="images/logo.png">
+  <title>BIOZAGRI SAS | Control Research – Innovación Agrícola Sostenible</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+
+  <!-- Three.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"LocalBusiness","name":"Control Research BIOZAGRI SAS","email":"cr.biozagri.sas@gmail.com","telephone":["+573148953551","+573205632733"],"address":[{"@type":"PostalAddress","streetAddress":"Cra 46C #80 Sur 155","addressLocality":"Sabaneta","addressRegion":"Antioquia","addressCountry":"CO"},{"@type":"PostalAddress","streetAddress":"Kr 100 #43-262 LC 23","addressLocality":"Apartadó","addressRegion":"Antioquia","addressCountry":"CO"}]}
+  </script>
+</head>
+<body>
+
+<!-- ══════════════ PRELOADER ══════════════ -->
+<div id="preloader" class="preloader">
+  <div class="preloader-inner">
+    <div class="preloader-logo">
+      <img src="images/logo.png" alt="BIOZAGRI" class="preloader-img" onerror="this.style.display='none'">
+      <div class="preloader-wordmark">
+        <span class="pw-bio">BIO</span><span class="pw-zagri">ZAGRI</span>
+      </div>
+    </div>
+    <div class="preloader-bar"><div class="preloader-fill" id="preloaderFill"></div></div>
+    <p class="preloader-sub">Cargando experiencia agrícola...</p>
+  </div>
+</div>
+
+<!-- ══════════════ NAVBAR ══════════════ -->
+<nav id="navbar" class="navbar">
+  <div class="nav-inner">
+    <a href="#hero-section" class="nav-logo">
+      <img src="images/logo.png" alt="BIOZAGRI" class="nav-logo-img" onerror="this.style.display='none'">
+      <div class="nav-logo-text">
+        <span class="nl-bio">BIO</span><span class="nl-zagri">ZAGRI</span>
+        <small>Control Research</small>
+      </div>
+    </a>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about" class="nav-link">Nosotros</a></li>
+      <li><a href="#portafolio" class="nav-link">Portafolio</a></li>
+      <li><a href="#servicios" class="nav-link">Servicios</a></li>
+      <li><a href="#estadisticas" class="nav-link">Resultados</a></li>
+      <li><a href="#contacto" class="nav-link">Contacto</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <a href="https://wa.me/573148953551?text=Hola%20BIOZAGRI%2C%20me%20gustar%C3%ADa%20obtener%20informaci%C3%B3n%20sobre%20sus%20productos"
+         class="nav-wa-btn" target="_blank" rel="noopener" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        <span>Escríbenos</span>
+      </a>
+    </div>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ══════════════ HERO — CINEMATIC DUAL VIDEO SCROLL ══════════════ -->
+<div id="hero-section" class="hero-section">
+
+  <!-- Particle canvas background -->
+  <canvas id="heroParticles" class="hero-particles"></canvas>
+
+  <!-- Ambient background (fades out during expansion) -->
+  <div class="hero-ambient" id="heroAmbient">
+    <img src="images/hero-bg.png" alt="Cultivos de banano Urabá" class="hero-ambient-img" onerror="this.style.display='none'">
+    <div class="hero-ambient-overlay"></div>
+    <div class="hero-ambient-gradient"></div>
+  </div>
+
+  <!-- Split title text -->
+  <div class="hero-split-title" id="heroSplitTitle">
+    <div class="hero-split-left" id="heroTitleLeft">
+      <span class="hst-line">CONTROL</span>
+      <span class="hst-line">RESEARCH</span>
+    </div>
+    <div class="hero-split-right" id="heroTitleRight">
+      <span class="hst-line hst-accent">BIO</span>
+      <span class="hst-line">ZAGRI</span>
+    </div>
+  </div>
+
+  <!-- The expanding video card -->
+  <div class="hero-card" id="heroCard">
+
+    <!-- Video 1: Banana crop - ground level / aerial plantation view -->
+    <video id="heroVid1" class="hero-vid"
+      src="videos/hero1.mp4"
+      autoplay muted loop playsinline
+      poster="images/hero-poster.png"
+      preload="auto">
+    </video>
+
+    <!-- Video 2: Aerial fumigation turbothrush nozzle POV (fades in) -->
+    <video id="heroVid2" class="hero-vid hero-vid-2"
+      src="videos/hero2.mp4"
+      muted loop playsinline
+      preload="auto">
+    </video>
+
+    <!-- Cinematic overlay -->
+    <div class="hero-card-overlay" id="heroCardOverlay"></div>
+
+    <!-- Phase indicators — para cambiar el texto edita el <span> de abajo -->
+    <div class="hero-phase-tag" id="heroPhase1">
+      <span class="phase-dot phase-dot-green"></span>
+      <span>Insumos Agrícolas Certificados · Colombia</span>
+    </div>
+
+    <!-- Scroll hint -->
+    <div class="hero-scroll-hint" id="heroScrollHint">
+      <div class="scroll-hint-track">
+        <div class="scroll-hint-thumb"></div>
+      </div>
+      <span>Desliza para explorar</span>
+    </div>
+
+  </div>
+
+  <!-- Hero revealed content (appears as card fully expands) -->
+  <div class="hero-revealed" id="heroRevealed">
+    <div class="hero-badge-row">
+      <span class="hero-badge"><i class="fas fa-certificate"></i> Registro ICA Certificado</span>
+      <span class="hero-badge"><i class="fas fa-map-marker-alt"></i> Sabaneta &amp; Apartadó, Antioquia</span>
+    </div>
+    <h1 class="hero-main-title">
+      <span class="hmt-line">Innovación Agrícola</span>
+      <span class="hmt-accent">Sostenible</span>
+    </h1>
+    <p class="hero-tagline">
+      Insumos biológicos y agroquímicos certificados para el<br class="br-desktop">
+      sector agroindustrial colombiano
+    </p>
+    <div class="hero-cta-row">
+      <a href="#portafolio" class="btn-hero-primary">
+        <i class="fas fa-seedling"></i> Ver Portafolio
+      </a>
+      <a href="https://wa.me/573148953551?text=Hola%20BIOZAGRI%2C%20quisiera%20hablar%20con%20un%20asesor"
+         class="btn-hero-secondary" target="_blank" rel="noopener">
+        <i class="fab fa-whatsapp"></i> Contactar Asesor
+      </a>
+    </div>
+    <div class="hero-quick-links">
+      <a href="https://wa.me/573148953551" target="_blank" rel="noopener" class="hql-item" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+      <a href="https://www.instagram.com" target="_blank" rel="noopener" class="hql-item" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.facebook.com" target="_blank" rel="noopener" class="hql-item" aria-label="Facebook">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="#portafolio" class="hql-item hql-catalog" aria-label="Catálogo">
+        <i class="fas fa-book-open"></i>
+        <span>Catálogo</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Scroll down indicator (after expansion) -->
+  <div class="hero-scroll-down" id="heroScrollDown">
+    <div class="hsd-arrow"></div>
+    <span>Explorar</span>
+  </div>
+
+</div>
+<!-- /hero-section -->
+
+<!-- ══════════════ MAIN SITE CONTENT ══════════════ -->
+<main id="mainContent" class="main-content">
+
+  <!-- ── ESTADÍSTICAS ──────────────────────── -->
+  <section id="estadisticas" class="section-stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card" data-count="5000" data-suffix="+">
+          <div class="stat-icon-wrap">
+            <i class="fas fa-map-marked-alt"></i>
+          </div>
+          <div class="stat-number"><span class="stat-num">0</span><span class="stat-suf">+</span></div>
+          <p>Ha Impactadas</p>
+        </div>
+        <div class="stat-card" data-count="5" data-suffix="">
+          <div class="stat-icon-wrap">
+            <i class="fas fa-flask"></i>
+          </div>
+          <div class="stat-number"><span class="stat-num">0</span><span class="stat-suf"></span></div>
+          <p>Productos en Catálogo</p>
+        </div>
+        <div class="stat-card" data-count="3" data-suffix="+">
+          <div class="stat-icon-wrap">
+            <i class="fas fa-calendar-check"></i>
+          </div>
+          <div class="stat-number"><span class="stat-num">0</span><span class="stat-suf">+</span></div>
+          <p>Años de Experiencia</p>
+        </div>
+        <div class="stat-card" data-count="14" data-suffix="%">
+          <div class="stat-icon-wrap">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <div class="stat-number"><span class="stat-num">0</span><span class="stat-suf">%</span></div>
+          <p>Incremento Promedio en Rendimiento</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── JAGUAR SHOWCASE — Animated Gradient + Spline 3D ── -->
+  <section id="jaguar-showcase" class="section-jaguar">
+
+    <!-- Animated radial gradient canvas background -->
+    <canvas id="gradientCanvas" class="jaguar-gradient-canvas" aria-hidden="true"></canvas>
+
+    <div class="jaguar-inner container">
+
+      <!-- Left: Brand identity with jaguar -->
+      <div class="jaguar-brand reveal-left">
+        <div class="jaguar-eyebrow">
+          <span class="jag-dot"></span>
+          Control Research
+        </div>
+        <div class="jaguar-logo-wrap">
+          <div class="jaguar-glow-ring"></div>
+          <img
+            src="images/logo.png"
+            alt="BIOZAGRI Jaguar Logo"
+            class="jaguar-img"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
+          >
+          <!-- Fallback wordmark if logo not yet saved -->
+          <div class="jaguar-wordmark-fallback" style="display:none">
+            <span class="jwf-bio">BIO</span><span class="jwf-zagri">ZAGRI</span>
+          </div>
+        </div>
+        <h2 class="jaguar-title">
+          <span class="jt-line">Tecnología e</span>
+          <span class="jt-accent">Innovación</span>
+          <span class="jt-line">al servicio del</span>
+          <span class="jt-accent-green">Agro</span>
+        </h2>
+        <p class="jaguar-desc">
+          Fusionamos ciencia agrícola de vanguardia con tecnología digital
+          para llevar resultados medibles al campo colombiano.
+        </p>
+        <div class="jaguar-tags">
+          <span class="jtag"><i class="fas fa-certificate"></i> Reg. ICA</span>
+          <span class="jtag"><i class="fas fa-dna"></i> Biotecnología</span>
+          <span class="jtag"><i class="fas fa-leaf"></i> Sostenible</span>
+        </div>
+      </div>
+
+      <!-- Right: GooeyText morphing identity showcase -->
+      <div class="jaguar-gooey reveal-right">
+
+        <!-- Hidden SVG filter: blur + alpha-threshold = liquid gooey morph -->
+        <svg class="gooey-filter-def" aria-hidden="true">
+          <defs>
+            <!-- React original: ONLY feColorMatrix — no feGaussianBlur here.
+                 The blur is applied per-span by JS. Parent only thresholds alpha. -->
+            <filter id="gooeyThreshold" x="-50%" y="-50%" width="200%" height="200%"
+                    color-interpolation-filters="sRGB">
+              <feColorMatrix
+                in="SourceGraphic"
+                type="matrix"
+                values="1 0 0 0 0
+                        0 1 0 0 0
+                        0 0 1 0 0
+                        0 0 0 255 -140"/>
+            </filter>
+          </defs>
+        </svg>
+
+        <div class="gooey-card">
+          <!-- Drifting ambient glow (decorative) -->
+          <div class="gooey-ambient" aria-hidden="true"></div>
+
+          <!-- Faint watermark logo -->
+          <img src="images/logo.png" alt="" class="gooey-logo-bg"
+               aria-hidden="true" onerror="this.style.display='none'">
+
+          <!-- Morphing word stage — SVG filter is applied here -->
+          <div class="gooey-stage" id="gooeyStage">
+            <span class="gooey-txt" id="gooeyA">BIOZAGRI</span>
+            <span class="gooey-txt" id="gooeyB">BIOZAGRI</span>
+          </div>
+
+          <!-- Animated tagline beneath the word -->
+          <p class="gooey-tagline" id="gooeyTagline">Control Research SAS</p>
+
+          <!-- Progress dots -->
+          <div class="gooey-dots" id="gooeyDots" aria-hidden="true">
+            <span class="gd active"></span>
+            <span class="gd"></span>
+            <span class="gd"></span>
+            <span class="gd"></span>
+            <span class="gd"></span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── QUIÉNES SOMOS ─────────────────────── -->
+  <section id="about" class="section-about section-pad">
+    <div class="container">
+      <div class="about-grid">
+
+        <div class="about-content reveal-left">
+          <div class="section-eyebrow"><i class="fas fa-leaf"></i> Nuestra Empresa</div>
+          <h2 class="section-title">¿Quiénes <span class="text-gradient">Somos?</span></h2>
+          <p class="about-body">
+            <strong>Control Research BIOZAGRI SAS</strong> es una empresa colombiana especializada en la
+            comercialización de insumos agrícolas de alta calidad para el sector agroindustrial.
+            Con presencia estratégica en <em>Sabaneta</em> y <em>Apartadó, Antioquia</em>, brindamos
+            soluciones innovadoras respaldadas por investigación científica y Registro ICA.
+          </p>
+          <p class="about-body">
+            Representamos marcas de clase mundial como <strong>Agraforum</strong>,
+            ofreciendo productos de precisión para maximizar la productividad de sus cultivos de manera
+            sostenible, con acompañamiento técnico especializado en campo.
+          </p>
+
+          <div class="about-badges">
+            <span class="about-badge"><i class="fas fa-certificate"></i> Registro ICA</span>
+            <span class="about-badge"><i class="fas fa-map-marker-alt"></i> 2 Sedes en Antioquia</span>
+            <span class="about-badge"><i class="fas fa-headset"></i> Soporte Técnico</span>
+            <span class="about-badge"><i class="fas fa-award"></i> Productos Certificados</span>
+          </div>
+        </div>
+
+        <div class="about-cards reveal-right">
+          <div class="mv-card">
+            <div class="mvc-icon"><i class="fas fa-bullseye"></i></div>
+            <h3>Misión</h3>
+            <p>Proveer insumos agrícolas innovadores y certificados que potencien la productividad de los agricultores colombianos, promoviendo prácticas sostenibles y respetuosas con el medio ambiente.</p>
+          </div>
+          <div class="mv-card mv-card-vision">
+            <div class="mvc-icon"><i class="fas fa-eye"></i></div>
+            <h3>Visión</h3>
+            <p>Ser la empresa líder en comercialización de insumos agrícolas de alta tecnología en Colombia para 2030, reconocidos por nuestra innovación, calidad científica y compromiso con el desarrollo rural.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── VALORES ───────────────────────────── -->
+  <section id="valores" class="section-valores section-pad">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <div class="section-eyebrow"><i class="fas fa-star"></i> Lo que nos define</div>
+        <h2 class="section-title">Nuestros <span class="text-gradient">Valores</span></h2>
+      </div>
+      <div class="valores-grid">
+        <div class="valor-card reveal-up" style="--delay:0s">
+          <div class="vc-icon"><i class="fas fa-leaf"></i></div>
+          <h4>Sostenibilidad</h4>
+          <p>Comprometidos con el cuidado del medio ambiente y la producción responsable para generaciones futuras.</p>
+          <div class="vc-line"></div>
+        </div>
+        <div class="valor-card reveal-up" style="--delay:0.1s">
+          <div class="vc-icon"><i class="fas fa-microscope"></i></div>
+          <h4>Innovación</h4>
+          <p>Siempre a la vanguardia de la ciencia agrícola y las nuevas tecnologías biológicas.</p>
+          <div class="vc-line"></div>
+        </div>
+        <div class="valor-card reveal-up" style="--delay:0.2s">
+          <div class="vc-icon"><i class="fas fa-handshake"></i></div>
+          <h4>Confianza</h4>
+          <p>Relaciones duraderas basadas en la transparencia, el cumplimiento y la honestidad.</p>
+          <div class="vc-line"></div>
+        </div>
+        <div class="valor-card reveal-up" style="--delay:0.3s">
+          <div class="vc-icon"><i class="fas fa-award"></i></div>
+          <h4>Calidad</h4>
+          <p>Productos certificados y respaldados por el Instituto Colombiano Agropecuario ICA.</p>
+          <div class="vc-line"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PORTAFOLIO ─────────────────────────── -->
+  <section id="portafolio" class="section-portfolio section-pad">
+    <div class="container">
+
+      <div class="section-header reveal-up">
+        <div class="section-eyebrow"><i class="fas fa-boxes"></i> Nuestros Productos</div>
+        <h2 class="section-title">Portafolio de <span class="text-gradient">Productos</span></h2>
+        <p class="section-sub">Soluciones integrales para cada necesidad de su cultivo</p>
+      </div>
+
+      <div class="catalog-controls reveal-up">
+        <div class="search-wrap">
+          <i class="fas fa-search"></i>
+          <input type="text" id="searchInput" placeholder="Buscar producto..." class="search-input" autocomplete="off">
+        </div>
+        <div class="filter-row">
+          <button class="filter-btn active" data-filter="all">Todos</button>
+          <button class="filter-btn" data-filter="bioestimulantes">Bioestimulantes</button>
+          <button class="filter-btn" data-filter="nutricion">Nutrición Vegetal</button>
+        </div>
+      </div>
+
+      <div class="products-grid" id="productsGrid">
+
+        <!-- Agra-ComCat — Bioestimulante orgánico -->
+        <div class="product-card" data-category="bioestimulantes" data-name="Agra ComCat Agraforum bioestimulante organico extracto plantas silvestres OKO OMRI">
+          <div class="pc-media pc-media-3">
+            <img src="images/productos/agra-comcat.png" alt="Agra-ComCat" class="pc-product-img" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+            <i class="fas fa-bolt" style="display:none"></i>
+            <span class="pc-badge pc-badge-new">Orgánico</span>
+          </div>
+          <div class="pc-body">
+            <span class="pc-cat">Fertilizante Orgánico Mineral · AgraForUm</span>
+            <h4>Agra-ComCat®</h4>
+            <p class="pc-desc">Bioextracto de plantas silvestres (<em>Caryophyllaceae</em>) con 39.67% carbono orgánico. Activa metabolismo vegetal, mejora calidad del fruto y refuerza resistencia al estrés. Certificado orgánico <strong>OKO</strong> y <strong>OMRI</strong>.</p>
+            <div class="pc-crops">
+              <span class="pc-crop"><i class="fas fa-leaf"></i> Todos los cultivos</span>
+            </div>
+            <div class="pc-footer">
+              <span class="pc-ica"><i class="fas fa-certificate"></i> ICA 12327</span>
+              <div class="pc-actions">
+                <a href="docs/fichas-tecnicas/FT-Agra-ComCat.pdf" download="FT-Agra-ComCat.pdf"
+                   class="btn-product-dl" title="Descargar Ficha Técnica PDF">
+                  <i class="fas fa-file-pdf"></i> Ficha Técnica
+                </a>
+                <a href="https://wa.me/573148953551?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20Agra-ComCat"
+                   class="btn-product" target="_blank" rel="noopener">
+                  <i class="fab fa-whatsapp"></i> Cotizar
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Agra CibuSil — K + Silicio -->
+        <div class="product-card" data-category="nutricion" data-name="CibuSil Agraforum silicio potasio K2O SiO2 soluble nutricion vegetal">
+          <div class="pc-media pc-media-4">
+            <img src="images/productos/cibusil.png" alt="Agra CibuSil" class="pc-product-img" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+            <i class="fas fa-gem" style="display:none"></i>
+          </div>
+          <div class="pc-body">
+            <span class="pc-cat">Nutrición Vegetal · AgraForUm</span>
+            <h4>Agra CibuSil®</h4>
+            <p class="pc-desc">Concentrado soluble de Potasio (K₂O) y Silicio (SiO₂). Fortalece la pared celular de la planta, mejora resistencia a enfermedades foliares y al estrés hídrico. Aplicación foliar 250–300 cc/ha.</p>
+            <div class="pc-crops">
+              <span class="pc-crop"><i class="fas fa-leaf"></i> Banano</span>
+              <span class="pc-crop"><i class="fas fa-seedling"></i> Hortalizas</span>
+            </div>
+            <div class="pc-footer">
+              <span class="pc-ica"><i class="fas fa-certificate"></i> ICA 12462</span>
+              <div class="pc-actions">
+                <a href="docs/fichas-tecnicas/FT-CibuSil.pdf" download="FT-CibuSil.pdf"
+                   class="btn-product-dl" title="Descargar Ficha Técnica PDF">
+                  <i class="fas fa-file-pdf"></i> Ficha Técnica
+                </a>
+                <a href="https://wa.me/573148953551?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20Agra%20CibuSil"
+                   class="btn-product" target="_blank" rel="noopener">
+                  <i class="fab fa-whatsapp"></i> Cotizar
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- AgraAlgen — Algas marinas -->
+        <div class="product-card" data-category="bioestimulantes" data-name="AgraAlgen Agraforum algas marinas Ascophyllum nodosum K2O bioestimulante foliar">
+          <div class="pc-media pc-media-5">
+            <img src="images/productos/agraAlgen.png" alt="AgraAlgen" class="pc-product-img" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+            <i class="fas fa-water" style="display:none"></i>
+            <span class="pc-badge pc-badge-bio">Natural</span>
+          </div>
+          <div class="pc-body">
+            <span class="pc-cat">Fertilizante de Algas Marinas · AgraForUm</span>
+            <h4>AgraAlgen®</h4>
+            <p class="pc-desc">Extracto microgranular de <em>Ascophyllum nodosum</em> con K₂O 20.39% y ácido algínico 6.85%. Mejora formación de yemas, floración y retención de frutos. Excelente antioxidante en condiciones de estrés. Foliar 200 g/ha.</p>
+            <div class="pc-crops">
+              <span class="pc-crop"><i class="fas fa-leaf"></i> Todos los cultivos</span>
+            </div>
+            <div class="pc-footer">
+              <span class="pc-ica"><i class="fas fa-certificate"></i> ICA 13058</span>
+              <div class="pc-actions">
+                <a href="docs/fichas-tecnicas/FT-AgraAlgen.pdf" download="FT-AgraAlgen.pdf"
+                   class="btn-product-dl" title="Descargar Ficha Técnica PDF">
+                  <i class="fas fa-file-pdf"></i> Ficha Técnica
+                </a>
+                <a href="https://wa.me/573148953551?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20AgraAlgen"
+                   class="btn-product" target="_blank" rel="noopener">
+                  <i class="fab fa-whatsapp"></i> Cotizar
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- AgraCoMoP — Co + Mo + P + K -->
+        <div class="product-card" data-category="nutricion" data-name="AgraCoMoP Agraforum cobalto molibdeno fosforo potasio leguminosas nodulacion">
+          <div class="pc-media pc-media-6">
+            <img src="images/productos/agraCoMoP.png" alt="AgraCoMoP" class="pc-product-img" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+            <i class="fas fa-atom" style="display:none"></i>
+          </div>
+          <div class="pc-body">
+            <span class="pc-cat">Nutrición Vegetal · AgraForUm</span>
+            <h4>AgraCoMoP®</h4>
+            <p class="pc-desc">Fertilizante soluble con Cobalto (3.70%), Molibdeno (8.92%), P₂O₅ (12%) y K₂O (8.05%). El cobalto inhibe síntesis de etileno y apoya bacterias fijadoras de N₂. Esencial para leguminosas y nodulación. Foliar 150–200 g/ha.</p>
+            <div class="pc-crops">
+              <span class="pc-crop"><i class="fas fa-wheat-awn"></i> Leguminosas</span>
+              <span class="pc-crop"><i class="fas fa-leaf"></i> Todos los cultivos</span>
+            </div>
+            <div class="pc-footer">
+              <span class="pc-ica"><i class="fas fa-certificate"></i> ICA 13069</span>
+              <div class="pc-actions">
+                <a href="docs/fichas-tecnicas/FT-AgraCoMoP.pdf" download="FT-AgraCoMoP.pdf"
+                   class="btn-product-dl" title="Descargar Ficha Técnica PDF">
+                  <i class="fas fa-file-pdf"></i> Ficha Técnica
+                </a>
+                <a href="https://wa.me/573148953551?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20AgraCoMoP"
+                   class="btn-product" target="_blank" rel="noopener">
+                  <i class="fab fa-whatsapp"></i> Cotizar
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- AgraActivator 12 — NPK soluble -->
+        <div class="product-card" data-category="nutricion" data-name="AgraActivator 12 Agraforum NPK fertilizante soluble nitrogeno fosforo potasio fertirriego foliar">
+          <div class="pc-media pc-media-1">
+            <img src="images/productos/agraActivator12.png" alt="AgraActivator 12" class="pc-product-img" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+            <i class="fas fa-rocket" style="display:none"></i>
+            <span class="pc-badge pc-badge-new">Destacado</span>
+          </div>
+          <div class="pc-body">
+            <span class="pc-cat">Fertilizante NPK Soluble · AgraForUm</span>
+            <h4>AgraActivator 12®</h4>
+            <p class="pc-desc">Fertilizante soluble NPK de alta asimilación: N 6.78% · P₂O₅ 6.58% · K₂O 23.9%, complementado con microelementos. Apto para aplicación foliar y sistemas de fertirriego. Potencia el llenado de frutos y la calidad exportable.</p>
+            <div class="pc-crops">
+              <span class="pc-crop"><i class="fas fa-leaf"></i> Banano</span>
+              <span class="pc-crop"><i class="fas fa-apple-whole"></i> Frutales</span>
+              <span class="pc-crop"><i class="fas fa-seedling"></i> Hortalizas</span>
+            </div>
+            <div class="pc-footer">
+              <span class="pc-ica"><i class="fas fa-certificate"></i> ICA 13554</span>
+              <div class="pc-actions">
+                <a href="docs/fichas-tecnicas/FT-AgraActivator-12.pdf" download="FT-AgraActivator-12.pdf"
+                   class="btn-product-dl" title="Descargar Ficha Técnica PDF">
+                  <i class="fas fa-file-pdf"></i> Ficha Técnica
+                </a>
+                <a href="https://wa.me/573148953551?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20AgraActivator%2012"
+                   class="btn-product" target="_blank" rel="noopener">
+                  <i class="fab fa-whatsapp"></i> Cotizar
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /products-grid -->
+
+      <div class="catalog-empty" id="catalogEmpty">
+        <i class="fas fa-search"></i>
+        <p>No se encontraron productos. Intente con otro término.</p>
+      </div>
+
+      <div class="catalog-cta reveal-up">
+        <p>¿No encuentra lo que busca? Nuestro equipo técnico le asesorará personalmente.</p>
+        <a href="https://wa.me/573148953551?text=Hola%2C%20necesito%20asesor%C3%ADa%20sobre%20productos%20agr%C3%ADcolas"
+           class="btn-primary" target="_blank" rel="noopener">
+          <i class="fab fa-whatsapp"></i> Solicitar Asesoría Técnica
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── SERVICIOS ──────────────────────────── -->
+  <section id="servicios" class="section-services section-pad">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <div class="section-eyebrow"><i class="fas fa-cogs"></i> Lo que hacemos</div>
+        <h2 class="section-title">Nuestros <span class="text-gradient">Servicios</span></h2>
+        <p class="section-sub">Soluciones integrales para el campo colombiano</p>
+      </div>
+      <div class="services-grid">
+
+        <div class="service-card reveal-up" style="--delay:0s">
+          <div class="svc-icon"><i class="fas fa-user-doctor"></i></div>
+          <h3>Asesoría Técnica Agrícola</h3>
+          <p>Profesionales especializados en campo para diagnóstico, planificación nutricional y manejo integrado de cultivos en toda Colombia.</p>
+          <div class="svc-tag">En campo</div>
+        </div>
+
+        <div class="service-card reveal-up" style="--delay:0.1s">
+          <div class="svc-icon"><i class="fas fa-microscope"></i></div>
+          <h3>Investigación y Desarrollo</h3>
+          <p>Investigación aplicada en condiciones reales de campo colombiano para validar y optimizar protocolos de nutrición y fitosanidad.</p>
+          <div class="svc-tag">I+D</div>
+        </div>
+
+        <div class="service-card reveal-up" style="--delay:0.2s">
+          <div class="svc-icon"><i class="fas fa-route"></i></div>
+          <h3>Acompañamiento en Cultivos</h3>
+          <p>Seguimiento técnico continuo durante todo el ciclo del cultivo: desde siembra hasta cosecha, con registros documentados de evolución.</p>
+          <div class="svc-tag">Continuo</div>
+        </div>
+
+        <div class="service-card reveal-up" style="--delay:0.3s">
+          <div class="svc-icon"><i class="fas fa-clipboard-check"></i></div>
+          <h3>Diagnóstico Agrícola</h3>
+          <p>Análisis foliar, de suelo y de agua con interpretación agronómica personalizada para identificar deficiencias y enfermedades con precisión.</p>
+          <div class="svc-tag">Análisis</div>
+        </div>
+
+        <div class="service-card reveal-up" style="--delay:0.4s">
+          <div class="svc-icon"><i class="fas fa-seedling"></i></div>
+          <h3>Planes Nutricionales</h3>
+          <p>Diseño de programas de nutrición a la medida basados en análisis de suelo, requerimientos del cultivo y objetivos de producción del agricultor.</p>
+          <div class="svc-tag">Personalizado</div>
+        </div>
+
+        <div class="service-card reveal-up service-card-featured" style="--delay:0.5s">
+          <div class="svc-icon svc-icon-gold"><i class="fas fa-laptop-code"></i></div>
+          <h3>Software de Seguimiento de Campo</h3>
+          <p>Plataforma digital operativa para registro y monitoreo de variables agronómicas en campo. Generación de informes técnicos automatizados y toma de decisiones basada en datos en tiempo real.</p>
+          <div class="svc-tag svc-tag-gold">Disponible</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── VISUALIZACIÓN 3D (TECH) ──────────────── -->
+  <section id="tecnologia" class="section-tech section-pad">
+    <div class="tech-layout">
+      <div class="tech-canvas-wrap">
+        <canvas id="threeCanvas"></canvas>
+        <div class="tech-canvas-overlay"></div>
+      </div>
+      <div class="tech-content reveal-right">
+        <div class="section-eyebrow"><i class="fas fa-dna"></i> Ciencia Aplicada</div>
+        <h2 class="section-title">Tecnología al<br><span class="text-gradient">Servicio del Campo</span></h2>
+        <p class="tech-body">Nuestros productos están desarrollados con biotecnología de vanguardia, aprovechando microorganismos benéficos seleccionados para maximizar la productividad agrícola de forma sostenible y certificada.</p>
+        <div class="tech-features">
+          <div class="tech-feat">
+            <div class="tf-icon"><i class="fas fa-dna"></i></div>
+            <div>
+              <h5>Biotecnología Avanzada</h5>
+              <p>Cepas microbianas de alta eficacia, seleccionadas en laboratorio de investigación</p>
+            </div>
+          </div>
+          <div class="tech-feat">
+            <div class="tf-icon"><i class="fas fa-recycle"></i></div>
+            <div>
+              <h5>Producción Sostenible</h5>
+              <p>Reducción de agroquímicos convencionales sin sacrificar rendimiento productivo</p>
+            </div>
+          </div>
+          <div class="tech-feat">
+            <div class="tf-icon"><i class="fas fa-chart-line"></i></div>
+            <div>
+              <h5>Resultados Medibles</h5>
+              <p>Incrementos documentados del 30–60% en eficiencia nutricional y sanitaria</p>
+            </div>
+          </div>
+          <div class="tech-feat">
+            <div class="tf-icon"><i class="fas fa-certificate"></i></div>
+            <div>
+              <h5>Certificados ICA Colombia</h5>
+              <p>Todos los productos con registro vigente del Instituto Colombiano Agropecuario</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TESTIMONIOS ────────────────────────── -->
+  <!-- Desactivado temporalmente: aún no hay testimonios reales. Quitar style="display:none" cuando haya contenido. -->
+  <section id="testimonios" class="section-testi section-pad" style="display:none">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <div class="section-eyebrow"><i class="fas fa-quote-left"></i> Lo que dicen</div>
+        <h2 class="section-title">Testimonios de <span class="text-gradient">Nuestros Clientes</span></h2>
+      </div>
+      <div class="testi-wrapper reveal-up">
+        <button class="testi-nav testi-prev" id="testiPrev" aria-label="Anterior">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <!-- Las tarjetas se renderizan desde data/biozagri-data.js -->
+        <div class="testi-track" id="testiTrack"></div>
+
+        <button class="testi-nav testi-next" id="testiNext" aria-label="Siguiente">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+      <div class="testi-dots" id="testiDots"></div>
+    </div>
+  </section>
+
+  <!-- ── BLOG ───────────────────────────────── -->
+  <!-- Desactivado temporalmente: aún no hay artículos reales. Quitar style="display:none" cuando haya contenido. -->
+  <section id="blog" class="section-blog section-pad" style="display:none">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <div class="section-eyebrow"><i class="fas fa-newspaper"></i> Actualidad</div>
+        <h2 class="section-title">Blog <span class="text-gradient">Agrícola</span></h2>
+        <p class="section-sub">Consejos técnicos, noticias del sector y novedades BIOZAGRI</p>
+      </div>
+      <!-- Las tarjetas se renderizan desde data/biozagri-data.js -->
+      <div class="blog-grid" id="blogGrid"></div>
+    </div>
+  </section>
+
+  <!-- ── REDES SOCIALES ─────────────────────── -->
+  <!-- Desactivado temporalmente: aún no hay redes sociales activas. Quitar style="display:none" cuando existan. -->
+  <section id="redes" class="section-social section-pad" style="display:none">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <div class="section-eyebrow"><i class="fas fa-share-alt"></i> Conéctate</div>
+        <h2 class="section-title">Síguenos en <span class="text-gradient">Redes</span></h2>
+        <p class="section-sub">Contenido agrícola, consejos técnicos y novedades</p>
+      </div>
+      <div class="social-grid reveal-up">
+        <a href="https://www.facebook.com" target="_blank" rel="noopener" class="social-card social-fb">
+          <div class="sc-icon"><i class="fab fa-facebook-f"></i></div>
+          <div class="sc-info"><h4>Facebook</h4><p>Noticias y consejos agro</p><span>@BiozagriSAS</span></div>
+          <i class="fas fa-external-link-alt sc-ext"></i>
+        </a>
+        <a href="https://www.instagram.com" target="_blank" rel="noopener" class="social-card social-ig">
+          <div class="sc-icon"><i class="fab fa-instagram"></i></div>
+          <div class="sc-info"><h4>Instagram</h4><p>Fotos de campo y resultados</p><span>@biozagri.sas</span></div>
+          <i class="fas fa-external-link-alt sc-ext"></i>
+        </a>
+        <a href="https://www.linkedin.com" target="_blank" rel="noopener" class="social-card social-li">
+          <div class="sc-icon"><i class="fab fa-linkedin-in"></i></div>
+          <div class="sc-info"><h4>LinkedIn</h4><p>Red profesional y corporativa</p><span>BIOZAGRI SAS</span></div>
+          <i class="fas fa-external-link-alt sc-ext"></i>
+        </a>
+        <a href="https://wa.me/573148953551" target="_blank" rel="noopener" class="social-card social-wa">
+          <div class="sc-icon"><i class="fab fa-whatsapp"></i></div>
+          <div class="sc-info"><h4>WhatsApp</h4><p>Atención directa e inmediata</p><span>+57 314 895 3551</span></div>
+          <i class="fas fa-external-link-alt sc-ext"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── UBICACIONES ─────────────────────────── -->
+  <section id="ubicaciones" class="section-ubicaciones section-pad">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <div class="section-eyebrow"><i class="fas fa-map-marked-alt"></i> Dónde estamos</div>
+        <h2 class="section-title">Nuestras <span class="text-gradient">Sedes</span></h2>
+      </div>
+      <div class="ubi-grid">
+
+        <!-- SEDE PRINCIPAL (BODEGA) — Apartadó / Urabá -->
+        <div class="ubi-card reveal-left">
+          <!-- 🗺️ Para actualizar el mapa: ve a maps.google.com → busca tu dirección exacta
+               → Compartir → Insertar mapa → copia el src del iframe y pégalo aquí abajo -->
+          <iframe
+            class="ubi-map-iframe"
+            src="https://maps.google.com/maps?q=Kr%20100%20%2343-262%20LC%2023%2C%20Apartad%C3%B3%2C%20Antioquia%2C%20Colombia&output=embed&z=16&hl=es"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            title="Sede Principal Apartadó">
+          </iframe>
+          <div class="ubi-info">
+            <h3><i class="fas fa-star" style="color:var(--gold)"></i> Sede Principal · Apartadó</h3>
+            <span class="ubi-region">Región de Urabá · Antioquia</span>
+            <div class="ubi-details">
+              <div class="udi"><i class="fas fa-map-marker-alt"></i> Kr 100 #43-262 LC 23, Apartadó</div>
+              <div class="udi"><i class="fas fa-phone"></i><a href="tel:+573205632733">+57 320 563 2733</a></div>
+              <div class="udi"><i class="fas fa-envelope"></i><a href="mailto:cr.biozagri.sas@gmail.com">cr.biozagri.sas@gmail.com</a></div>
+            </div>
+            <a href="https://wa.me/573205632733?text=Hola%2C%20estoy%20en%20Apartad%C3%B3%20y%20quiero%20informaci%C3%B3n"
+               class="btn-ubi" target="_blank" rel="noopener">
+              <i class="fab fa-whatsapp"></i> Contactar esta sede
+            </a>
+          </div>
+        </div>
+
+        <!-- SEDE ADMINISTRATIVA — Sabaneta -->
+        <div class="ubi-card reveal-right">
+          <!-- 🗺️ Para actualizar el mapa: ve a maps.google.com → busca tu dirección exacta
+               → Compartir → Insertar mapa → copia el src del iframe y pégalo aquí abajo -->
+          <iframe
+            class="ubi-map-iframe"
+            src="https://maps.google.com/maps?q=Cra%2046C%20%2380%20Sur%20155%2C%20Sabaneta%2C%20Antioquia%2C%20Colombia&output=embed&z=16&hl=es"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            title="Sede Sabaneta">
+          </iframe>
+          <div class="ubi-info">
+            <h3><i class="fas fa-building"></i> Sede Administrativa · Sabaneta</h3>
+            <span class="ubi-region">Área Metropolitana · Antioquia</span>
+            <div class="ubi-details">
+              <div class="udi"><i class="fas fa-map-marker-alt"></i> Cra 46C #80 Sur 155, Sabaneta</div>
+              <div class="udi"><i class="fas fa-phone"></i><a href="tel:+573148953551">+57 314 895 3551</a></div>
+              <div class="udi"><i class="fas fa-envelope"></i><a href="mailto:cr.biozagri.sas@gmail.com">cr.biozagri.sas@gmail.com</a></div>
+            </div>
+            <a href="https://wa.me/573148953551?text=Hola%2C%20estoy%20en%20Sabaneta%20y%20quiero%20informaci%C3%B3n"
+               class="btn-ubi" target="_blank" rel="noopener">
+              <i class="fab fa-whatsapp"></i> Contactar esta sede
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONTACTO ────────────────────────────── -->
+  <section id="contacto" class="section-contacto section-pad">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <div class="section-eyebrow"><i class="fas fa-paper-plane"></i> Hablemos</div>
+        <h2 class="section-title">¿Listo para <span class="text-gradient">Transformar</span> su Cultivo?</h2>
+        <p class="section-sub">Escríbanos y un asesor técnico le contactará a la brevedad</p>
+      </div>
+      <div class="contacto-grid">
+
+        <div class="contacto-form-wrap reveal-left">
+          <form id="contactoForm" class="contacto-form" novalidate>
+            <div class="form-row-2">
+              <div class="form-group">
+                <label for="nombre">Nombre completo <span class="req">*</span></label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan Pérez" required autocomplete="name">
+              </div>
+              <div class="form-group">
+                <label for="telefono">Teléfono / WhatsApp <span class="req">*</span></label>
+                <input type="tel" id="telefono" name="telefono" placeholder="+57 300 000 0000" required autocomplete="tel">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="correo">Correo electrónico</label>
+              <input type="email" id="correo" name="correo" placeholder="correo@ejemplo.com" autocomplete="email">
+            </div>
+            <div class="form-group">
+              <label for="asunto">Asunto <span class="req">*</span></label>
+              <select id="asunto" name="asunto" required>
+                <option value="">Seleccione un tema...</option>
+                <option value="informacion-producto">Información de producto</option>
+                <option value="asesoria-tecnica">Asesoría técnica</option>
+                <option value="cotizacion">Pedido / Cotización</option>
+                <option value="registro-ica">Registro ICA</option>
+                <option value="otro">Otro</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="mensaje">Mensaje <span class="req">*</span></label>
+              <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntenos sobre su cultivo y cómo podemos ayudarle..." required></textarea>
+            </div>
+            <button type="submit" class="btn-primary btn-submit" id="formSubmit">
+              <i class="fas fa-paper-plane"></i>
+              <span>Enviar Mensaje</span>
+            </button>
+            <div id="formSuccess" class="form-success" style="display:none">
+              <i class="fas fa-check-circle"></i>
+              <p>¡Mensaje enviado! Nos ponemos en contacto pronto.</p>
+            </div>
+          </form>
+        </div>
+
+        <div class="contacto-info reveal-right">
+          <h3>Información de Contacto</h3>
+          <div class="ci-list">
+            <div class="ci-item">
+              <div class="ci-icon"><i class="fas fa-envelope"></i></div>
+              <div><span>Correo electrónico</span><a href="mailto:cr.biozagri.sas@gmail.com">cr.biozagri.sas@gmail.com</a></div>
+            </div>
+            <div class="ci-item">
+              <div class="ci-icon"><i class="fab fa-whatsapp"></i></div>
+              <div><span>WhatsApp Principal</span><a href="tel:+573148953551">+57 314 895 3551</a></div>
+            </div>
+            <div class="ci-item">
+              <div class="ci-icon"><i class="fas fa-phone-alt"></i></div>
+              <div><span>Teléfono Alterno</span><a href="tel:+573205632733">+57 320 563 2733</a></div>
+            </div>
+            <div class="ci-item">
+              <div class="ci-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div><span>Sedes</span><strong>Sabaneta y Apartadó, Antioquia</strong></div>
+            </div>
+            <div class="ci-item">
+              <div class="ci-icon"><i class="fas fa-certificate"></i></div>
+              <div>
+                <span>Registros ICA — BIOZAGRI SAS</span>
+                <strong>PL0000932026 · CO0000122025 · CM0015022024</strong>
+              </div>
+            </div>
+          </div>
+          <a href="https://wa.me/573148953551?text=Hola%20BIOZAGRI%2C%20me%20gustar%C3%ADa%20hablar%20con%20un%20asesor%20t%C3%A9cnico"
+             class="btn-wa-big" target="_blank" rel="noopener">
+            <i class="fab fa-whatsapp"></i>
+            Chatear en WhatsApp Ahora
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main><!-- /main-content -->
+
+<!-- ══════════════ FOOTER ══════════════ -->
+<footer id="footer" class="footer">
+  <div class="footer-top">
+    <div class="container footer-grid">
+
+      <div class="footer-brand">
+        <a href="#hero-section" class="footer-logo">
+          <img src="images/logo.png" alt="BIOZAGRI" class="footer-logo-img" onerror="this.style.display='none'">
+          <div class="footer-logo-text">
+            <span class="fl-bio">BIO</span><span class="fl-zagri">ZAGRI</span>
+          </div>
+        </a>
+        <p>Control Research BIOZAGRI SAS. Comercializadora de insumos agrícolas biológicos y convencionales certificados ICA. Comprometidos con la agricultura sostenible de Colombia.</p>
+        <!-- Desactivado temporalmente: aún no hay redes sociales activas; WhatsApp ya está en Contáctanos. -->
+        <div class="footer-social" style="display:none">
+          <a href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://wa.me/573148953551" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <h5>Navegación</h5>
+        <ul>
+          <li><a href="#about">Quiénes Somos</a></li>
+          <li><a href="#portafolio">Portafolio</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h5>Productos</h5>
+        <ul>
+          <li><a href="#portafolio">Bioestimulantes</a></li>
+          <li><a href="#portafolio">Nutrición Vegetal</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h5>Contacto</h5>
+        <p><i class="fas fa-envelope"></i> cr.biozagri.sas@gmail.com</p>
+        <p><i class="fas fa-phone"></i> +57 314 895 3551</p>
+        <p><i class="fas fa-phone"></i> +57 320 563 2733</p>
+        <p><i class="fas fa-map-marker-alt"></i> Sabaneta, Antioquia</p>
+        <p><i class="fas fa-map-marker-alt"></i> Apartadó, Antioquia</p>
+        <div class="footer-ica">
+          <i class="fas fa-certificate"></i>
+          <span>Reg. ICA: PL0000932026 · CO0000122025 · CM0015022024</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container footer-bottom-inner">
+      <p>&copy; 2026 Control Research BIOZAGRI SAS – Todos los derechos reservados.</p>
+      <p>Hecho con <i class="fas fa-heart" style="color:#ef5350"></i> para el campo colombiano</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ══════════════ WHATSAPP CHATBOT ══════════════ -->
+<div id="waWidget" class="wa-widget">
+  <div id="chatPanel" class="chat-panel chat-hidden">
+    <div class="chat-header">
+      <div class="chat-avatar-wrap">
+        <div class="chat-avatar"><i class="fas fa-leaf"></i></div>
+        <div class="chat-online-dot"></div>
+      </div>
+      <div class="chat-header-info">
+        <strong>Asistente BIOZAGRI</strong>
+        <span><i class="fas fa-circle" style="color:#4caf50;font-size:7px"></i> En línea ahora</span>
+      </div>
+      <button id="chatClose" class="chat-close" aria-label="Cerrar"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="chat-messages" id="chatMessages"></div>
+    <div class="chat-quick-replies" id="quickReplies"></div>
+    <div class="chat-input-row">
+      <input type="text" id="chatInput" placeholder="Escribe un mensaje..." autocomplete="off">
+      <button id="chatSend" aria-label="Enviar"><i class="fas fa-paper-plane"></i></button>
+    </div>
+  </div>
+  <button id="waBtn" class="wa-btn" aria-label="Abrir WhatsApp">
+    <div class="wa-ring"></div>
+    <i class="fab fa-whatsapp" id="waIcon"></i>
+    <i class="fas fa-times" id="waCloseIcon" style="display:none"></i>
+    <span class="wa-badge" id="waBadge">1</span>
+  </button>
+</div>
+
+<!-- Scroll to top -->
+<button id="scrollTop" class="scroll-top-btn" aria-label="Volver arriba">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+<!-- ══════════════ COOKIE BANNER ══════════════ -->
+<div id="cookieBanner" class="cookie-banner" role="dialog" aria-label="Aviso de cookies" style="display:none">
+  <div class="cookie-inner">
+    <div class="cookie-text">
+      <i class="fas fa-cookie-bite cookie-icon"></i>
+      <p>
+        Usamos cookies propias y de terceros (Google Maps) para mejorar su experiencia y analizar el tráfico.
+        Al continuar navegando acepta su uso conforme a nuestra
+        <a href="politica-privacidad.html" target="_blank" rel="noopener">Política de Privacidad</a>
+        (Ley 1581 de 2012 — Colombia).
+      </p>
+    </div>
+    <div class="cookie-actions">
+      <a href="politica-privacidad.html" target="_blank" rel="noopener" class="btn-cookie-info">
+        Más información
+      </a>
+      <button id="cookieAccept" class="btn-cookie-accept">
+        <i class="fas fa-check"></i> Aceptar
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ BLOG MODAL ══════════════ -->
+<div id="blogModal" class="bm-overlay" role="dialog" aria-modal="true" aria-labelledby="blogModalTitle">
+  <div class="bm-panel">
+    <button class="bm-close" id="blogModalClose" aria-label="Cerrar artículo">
+      <i class="fas fa-times"></i>
+    </button>
+    <div class="bm-header">
+      <div class="bm-meta" id="blogModalMeta"></div>
+      <h2 class="bm-title" id="blogModalTitle"></h2>
+    </div>
+    <!-- iframe para PDF (solo cuando el artículo tiene PDF) -->
+    <iframe id="blogModalPdfFrame" class="bm-pdf-frame" src="" frameborder="0"
+      allowfullscreen title="Documento completo" style="display:none"></iframe>
+    <!-- Texto / resumen -->
+    <div class="bm-body" id="blogModalBody"></div>
+    <div class="bm-footer">
+      <a href="#contacto" class="bm-cta"
+         onclick="document.getElementById('blogModal').classList.remove('active');document.body.style.overflow=''">
+        <i class="fas fa-envelope"></i> Consultar con un asesor
+      </a>
+      <a id="blogModalPdfBtn" class="bm-cta bm-cta-pdf" href="#" target="_blank"
+         rel="noopener" download style="display:none">
+        <i class="fas fa-file-pdf"></i> Descargar PDF
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- Scripts -->
+<script src="data/biozagri-data.js"></script>
+<script src="js/three-scene.js" defer></script>
+<script src="js/main.js" defer></script>
+</body>
+</html>
