@@ -145,7 +145,7 @@ input,select,textarea{font-family:inherit}
 .preloader-wordmark{
   font-family:var(--font-head);font-size:2rem;font-weight:800;letter-spacing:.04em;
 }
-.pw-bio{color:var(--gold)}
+.pw-bio{color:var(--blue-glow)}
 .pw-zagri{color:var(--blue-glow)}
 .preloader-bar{
   width:180px;height:3px;
@@ -200,7 +200,7 @@ input,select,textarea{font-family:inherit}
   filter:drop-shadow(0 0 10px rgba(46,127,212,.5));
 }
 .nav-logo-text{line-height:1.1}
-.nl-bio{font-family:var(--font-head);font-size:1.15rem;font-weight:800;color:var(--gold)}
+.nl-bio{font-family:var(--font-head);font-size:1.15rem;font-weight:800;color:var(--blue-glow)}
 .nl-zagri{font-family:var(--font-head);font-size:1.15rem;font-weight:800;color:var(--blue-glow)}
 .nav-logo-text small{display:block;font-size:.65rem;color:#7eb8e8;letter-spacing:.08em;text-transform:uppercase}
 .nav-links{
@@ -303,7 +303,7 @@ input,select,textarea{font-family:inherit}
   white-space:nowrap;
 }
 .hst-accent{
-  background:linear-gradient(135deg,#6FAF4F,#2E7FD4,#c9a84c);
+  background:linear-gradient(135deg,#4F97DA,#2E7FD4);
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
   background-clip:text;
@@ -617,7 +617,7 @@ input,select,textarea{font-family:inherit}
   display:flex;align-items:center;
   font-family:var(--font-head);font-size:3rem;font-weight:900;
 }
-.jwf-bio{color:var(--gold)}
+.jwf-bio{color:var(--blue-glow)}
 .jwf-zagri{color:var(--blue-glow)}
 
 .jaguar-title{
@@ -1411,7 +1411,7 @@ input,select,textarea{font-family:inherit}
   filter:drop-shadow(0 0 8px rgba(46,127,212,.4));
 }
 .footer-logo-text{line-height:1}
-.fl-bio{font-family:var(--font-head);font-size:1.15rem;font-weight:800;color:var(--gold)}
+.fl-bio{font-family:var(--font-head);font-size:1.15rem;font-weight:800;color:var(--blue-glow)}
 .fl-zagri{font-family:var(--font-head);font-size:1.15rem;font-weight:800;color:var(--blue-glow)}
 .footer-brand p{color:var(--text-muted);font-size:.85rem;line-height:1.7;margin-bottom:1.25rem}
 .footer-social{display:flex;gap:.75rem;flex-wrap:wrap}
